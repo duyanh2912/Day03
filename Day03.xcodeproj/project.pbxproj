@@ -33,6 +33,7 @@
 		5005C3DD1E16C76D00390102 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5005C3DB1E16C76D00390102 /* FeaturedCollectionViewCell.xib */; };
 		50B30BF11E16C90900F32DF8 /* FeaturedCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B30BF01E16C90900F32DF8 /* FeaturedCollectionDataSource.swift */; };
 		50B30C001E16CCDA00F32DF8 /* Exercise1_Images in Resources */ = {isa = PBXBuildFile; fileRef = 50B30BFF1E16CCDA00F32DF8 /* Exercise1_Images */; };
+		50B30C021E16E56100F32DF8 /* Resources.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 50B30C011E16E56100F32DF8 /* Resources.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		5005C3DB1E16C76D00390102 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		50B30BF01E16C90900F32DF8 /* FeaturedCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionDataSource.swift; sourceTree = "<group>"; };
 		50B30BFF1E16CCDA00F32DF8 /* Exercise1_Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Exercise1_Images; sourceTree = "<group>"; };
+		50B30C011E16E56100F32DF8 /* Resources.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Resources.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				50B30BFF1E16CCDA00F32DF8 /* Exercise1_Images */,
+				50B30C011E16E56100F32DF8 /* Resources.rtf */,
 				5005C3D51E16B5F700390102 /* FeaturedViewController.swift */,
 				50B30BF01E16C90900F32DF8 /* FeaturedCollectionDataSource.swift */,
 				5005C3DA1E16C76D00390102 /* FeaturedCollectionViewCell.swift */,
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B30C021E16E56100F32DF8 /* Resources.rtf in Resources */,
 				50B30C001E16CCDA00F32DF8 /* Exercise1_Images in Resources */,
 				5005C3941E1540E100390102 /* LaunchScreen.storyboard in Resources */,
 				5005C3911E1540E100390102 /* Assets.xcassets in Resources */,
