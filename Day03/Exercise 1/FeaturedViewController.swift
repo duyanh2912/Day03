@@ -37,12 +37,14 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        if timer == nil {
-            timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [unowned self]
-                _ in
-                self.autoScroll()
-            }
+        setTimer()
+    }
+    
+    func setTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { [unowned self]
+            timer in
+            self.autoScroll()
         }
     }
     
@@ -53,8 +55,6 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         var destination = row + 1
         destination = (row >= dataSource.images.count - 1) ? 1 : destination
         
-        print(destination)
-        
         collectionView.scrollToItem(at: IndexPath(row: destination, section: 0), at: .left, animated: true)
     }
     
@@ -62,8 +62,13 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         return collectionView.frame.size
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("done")
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        setTimer()
+        
         let pageWidth = collectionView.frame.size.width
         let pageCount = CGFloat(dataSource.images.count)
         let fullOffset = pageWidth * (pageCount - 1)
@@ -88,6 +93,5 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayo
                 animated: false
             )
         }
-
     }
 }
