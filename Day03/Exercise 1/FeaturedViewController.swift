@@ -22,21 +22,21 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         let nib = UINib(nibName: "FeaturedCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: type(of: self).CELL_ID)
         
-        collectionView.delegate = self
-        
-        dataSource = FeaturedCollectionDataSource(collectionView: collectionView)
-        collectionView.dataSource = dataSource
-        
-        collectionView.showsHorizontalScrollIndicator = false
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        collectionView.scrollToItem(at: IndexPath(row: 1, section : 0), at: .left, animated: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if dataSource == nil {
+            dataSource = FeaturedCollectionDataSource(collectionView: collectionView)
+            collectionView.dataSource = dataSource
+        
+            collectionView.delegate = self
+            collectionView.showsHorizontalScrollIndicator = false
+            
+            collectionView.scrollToItem(at: IndexPath(row: 1, section : 0), at: .left, animated: false)
+        }
+        
         setTimer()
     }
     

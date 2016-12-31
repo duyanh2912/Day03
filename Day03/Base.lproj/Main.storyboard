@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="5280.8000000000002" y="1247.2263868065968"/>
         </scene>
-        <!--View Controller-->
+        <!--Picture Collection-->
         <scene sceneID="M3A-sN-wYu">
             <objects>
-                <viewController id="dro-WR-EVk" sceneMemberID="viewController">
+                <viewController id="dro-WR-EVk" userLabel="Picture Collection" customClass="PicturesCollectionViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bMH-Eo-pho"/>
                         <viewControllerLayoutGuide type="bottom" id="d4y-d1-X1l"/>
@@ -78,13 +78,39 @@
                     <view key="view" contentMode="scaleToFill" id="uiE-kN-aMo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Vu-s7-FO3">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="IIf-KQ-XcF" customClass="PicturesCollectionLayout" customModule="Day03" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lFY-5Y-9JT">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Vu-s7-FO3" firstAttribute="leading" secondItem="uiE-kN-aMo" secondAttribute="leading" id="HBd-rs-uQn"/>
+                            <constraint firstAttribute="trailing" secondItem="1Vu-s7-FO3" secondAttribute="trailing" id="HF4-Jd-wCV"/>
+                            <constraint firstItem="1Vu-s7-FO3" firstAttribute="bottom" secondItem="d4y-d1-X1l" secondAttribute="top" id="RzY-2j-fWX"/>
+                            <constraint firstItem="1Vu-s7-FO3" firstAttribute="top" secondItem="bMH-Eo-pho" secondAttribute="bottom" id="vRZ-aj-R1m"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="gJI-fW-wbK"/>
+                    <connections>
+                        <outlet property="collectionView" destination="1Vu-s7-FO3" id="tsT-o3-O52"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Thx-nW-Uu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4342" y="2015"/>
+            <point key="canvasLocation" x="4341.6000000000004" y="2014.5427286356824"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vBY-Pw-EW1">
