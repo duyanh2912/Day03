@@ -24,6 +24,10 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.barStyle = .default
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

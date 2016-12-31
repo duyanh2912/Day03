@@ -31,13 +31,20 @@ class PicturesCollectionLayout: UICollectionViewLayout {
             var size = CGSize(width: contentWidth / 3, height: contentWidth / 3)
             var origin = CGPoint(x: 0, y: CGFloat(i / 6) * contentWidth)
             
-            switch i % 6 {
+            switch i % 12 {
             case 0:
                 size = size.scale(by: 2)
             case 1, 2:
-                origin = origin.add(x: contentWidth * 2 / 3, y: CGFloat(i % 6 - 1) * contentWidth / 3)
+                origin = origin.add(x: contentWidth * 2 / 3, y: CGFloat(i % 12 - 1) * contentWidth / 3)
+            case 3, 4, 5:
+                origin = origin.add(x: CGFloat(i % 12 - 3) * contentWidth / 3, y: contentWidth * 2 / 3)
+            case 6:
+                size = size.scale(by: 2)
+                origin = origin.add(x: contentWidth / 3, y: 0)
+            case 7, 8:
+                origin = origin.add(x: 0, y: contentWidth * CGFloat(i % 12 - 7) / 3)
             default:
-                origin = origin.add(x: CGFloat(i % 6 - 3) * contentWidth / 3, y: contentWidth * 2 / 3)
+                origin = origin.add(x: CGFloat(i % 12 - 9) * contentWidth / 3, y: contentWidth * 2 / 3)
             }
             
             atr.frame = CGRect(origin: origin, size: size)

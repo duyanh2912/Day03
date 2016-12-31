@@ -11,18 +11,30 @@ import UIKit
 class PicturesCollectionViewController: UIViewController, UICollectionViewDelegate {
     
     static let CELL_ID = "Cell"
-    var dataSource: PicturesCollectionDataSource!
+    var dataSource: PicturesCollectionDataSource?
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         let nib = UINib(nibName: "PictureCollectionViewCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: type(of: self).CELL_ID)
-        
-        collectionView.delegate = self
-        
-        dataSource = PicturesCollectionDataSource(collectionView: collectionView)
-        collectionView.dataSource = dataSource
-        collectionView.collectionViewLayout = PicturesCollectionLayout()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.barStyle = .black
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if dataSource == nil {
+            collectionView.delegate = self
+            
+            dataSource = PicturesCollectionDataSource(collectionView: collectionView)
+            collectionView.dataSource = dataSource
+            collectionView.collectionViewLayout = PicturesCollectionLayout()
+        }
     }
 }
