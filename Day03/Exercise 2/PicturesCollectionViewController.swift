@@ -8,9 +8,8 @@
 import Utils
 import UIKit
 
-class PicturesCollectionViewController: UIViewController, UICollectionViewDelegate {
+class PicturesCollectionViewController: UIViewController, UICollectionViewDelegate, ReuseCell {
     
-    static let CELL_ID = "Cell"
     var dataSource: PicturesCollectionDataSource?
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -21,11 +20,15 @@ class PicturesCollectionViewController: UIViewController, UICollectionViewDelega
     
     override func viewDidLoad() {
         let nib = UINib(nibName: "PictureCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: type(of: self).CELL_ID)
+        collectionView.register(nib, forCellWithReuseIdentifier: CELL_ID)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.barStyle = .black
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.barStyle = .default
     }
     
     override func viewDidAppear(_ animated: Bool) {

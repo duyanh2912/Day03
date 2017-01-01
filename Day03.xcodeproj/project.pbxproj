@@ -32,6 +32,13 @@
 		5005C3DC1E16C76D00390102 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5005C3DA1E16C76D00390102 /* FeaturedCollectionViewCell.swift */; };
 		5005C3DD1E16C76D00390102 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5005C3DB1E16C76D00390102 /* FeaturedCollectionViewCell.xib */; };
 		500A5D311E18F217008F7708 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500A5D301E18F217008F7708 /* UIImage.swift */; };
+		503422F61E196A32001F7600 /* FontFamiliesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503422F21E196A32001F7600 /* FontFamiliesDataSource.swift */; };
+		503422F91E196A32001F7600 /* FontFamiliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503422F51E196A32001F7600 /* FontFamiliesViewController.swift */; };
+		503422FC1E196B52001F7600 /* FontStylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503422FB1E196B52001F7600 /* FontStylesViewController.swift */; };
+		503422FE1E196C9C001F7600 /* FontStylesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503422FD1E196C9C001F7600 /* FontStylesDataSource.swift */; };
+		503423011E197350001F7600 /* FontInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503423001E197350001F7600 /* FontInfoViewController.swift */; };
+		503423041E197ED6001F7600 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503423031E197ED6001F7600 /* FavouritesViewController.swift */; };
+		503423061E197F75001F7600 /* FavouritesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503423051E197F75001F7600 /* FavouritesDataSource.swift */; };
 		50B30BF11E16C90900F32DF8 /* FeaturedCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B30BF01E16C90900F32DF8 /* FeaturedCollectionDataSource.swift */; };
 		50B30C001E16CCDA00F32DF8 /* Exercise1_Images in Resources */ = {isa = PBXBuildFile; fileRef = 50B30BFF1E16CCDA00F32DF8 /* Exercise1_Images */; };
 		50B30C041E16E5E500F32DF8 /* Resources.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50B30C031E16E5E500F32DF8 /* Resources.strings */; };
@@ -41,6 +48,7 @@
 		50B4332F1E17C2A900FC3119 /* PicturesCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4332E1E17C2A900FC3119 /* PicturesCollectionDataSource.swift */; };
 		50B433311E17C96B00FC3119 /* Exercise2_Images in Resources */ = {isa = PBXBuildFile; fileRef = 50B433301E17C96B00FC3119 /* Exercise2_Images */; };
 		50B433331E17CDDF00FC3119 /* PicturesCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B433321E17CDDF00FC3119 /* PicturesCollectionLayout.swift */; };
+		50BE47731E195DA8004B6178 /* ReuseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BE47721E195DA8004B6178 /* ReuseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +103,13 @@
 		5005C3DA1E16C76D00390102 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
 		5005C3DB1E16C76D00390102 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		500A5D301E18F217008F7708 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		503422F21E196A32001F7600 /* FontFamiliesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamiliesDataSource.swift; sourceTree = "<group>"; };
+		503422F51E196A32001F7600 /* FontFamiliesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamiliesViewController.swift; sourceTree = "<group>"; };
+		503422FB1E196B52001F7600 /* FontStylesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStylesViewController.swift; sourceTree = "<group>"; };
+		503422FD1E196C9C001F7600 /* FontStylesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStylesDataSource.swift; sourceTree = "<group>"; };
+		503423001E197350001F7600 /* FontInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontInfoViewController.swift; sourceTree = "<group>"; };
+		503423031E197ED6001F7600 /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		503423051E197F75001F7600 /* FavouritesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesDataSource.swift; sourceTree = "<group>"; };
 		50B30BF01E16C90900F32DF8 /* FeaturedCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionDataSource.swift; sourceTree = "<group>"; };
 		50B30BFF1E16CCDA00F32DF8 /* Exercise1_Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Exercise1_Images; sourceTree = "<group>"; };
 		50B30C031E16E5E500F32DF8 /* Resources.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Resources.strings; sourceTree = "<group>"; };
@@ -104,6 +119,7 @@
 		50B4332E1E17C2A900FC3119 /* PicturesCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesCollectionDataSource.swift; sourceTree = "<group>"; };
 		50B433301E17C96B00FC3119 /* Exercise2_Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Exercise2_Images; sourceTree = "<group>"; };
 		50B433321E17CDDF00FC3119 /* PicturesCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesCollectionLayout.swift; sourceTree = "<group>"; };
+		50BE47721E195DA8004B6178 /* ReuseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				5005C3891E1540E100390102 /* AppDelegate.swift */,
+				50BE47721E195DA8004B6178 /* ReuseCell.swift */,
 				5005C38D1E1540E100390102 /* Main.storyboard */,
 				5005C3D71E16C50100390102 /* Exercise 1 */,
 				50B433211E17C06200FC3119 /* Exercise 2 */,
+				503422F01E196A32001F7600 /* Exercise 3 */,
 				5005C3901E1540E100390102 /* Assets.xcassets */,
 				5005C3921E1540E100390102 /* LaunchScreen.storyboard */,
 				5005C3951E1540E100390102 /* Info.plist */,
@@ -224,6 +242,52 @@
 				5005C3DB1E16C76D00390102 /* FeaturedCollectionViewCell.xib */,
 			);
 			path = "Exercise 1";
+			sourceTree = "<group>";
+		};
+		503422F01E196A32001F7600 /* Exercise 3 */ = {
+			isa = PBXGroup;
+			children = (
+				503422F11E196A32001F7600 /* Font Families */,
+				503422FA1E196B07001F7600 /* Font Styles */,
+				503422FF1E1970D2001F7600 /* Font Info */,
+				503423021E197EA0001F7600 /* Favourites */,
+			);
+			path = "Exercise 3";
+			sourceTree = "<group>";
+		};
+		503422F11E196A32001F7600 /* Font Families */ = {
+			isa = PBXGroup;
+			children = (
+				503422F21E196A32001F7600 /* FontFamiliesDataSource.swift */,
+				503422F51E196A32001F7600 /* FontFamiliesViewController.swift */,
+			);
+			path = "Font Families";
+			sourceTree = "<group>";
+		};
+		503422FA1E196B07001F7600 /* Font Styles */ = {
+			isa = PBXGroup;
+			children = (
+				503422FB1E196B52001F7600 /* FontStylesViewController.swift */,
+				503422FD1E196C9C001F7600 /* FontStylesDataSource.swift */,
+			);
+			path = "Font Styles";
+			sourceTree = "<group>";
+		};
+		503422FF1E1970D2001F7600 /* Font Info */ = {
+			isa = PBXGroup;
+			children = (
+				503423001E197350001F7600 /* FontInfoViewController.swift */,
+			);
+			path = "Font Info";
+			sourceTree = "<group>";
+		};
+		503423021E197EA0001F7600 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				503423031E197ED6001F7600 /* FavouritesViewController.swift */,
+				503423051E197F75001F7600 /* FavouritesDataSource.swift */,
+			);
+			path = Favourites;
 			sourceTree = "<group>";
 		};
 		50B433211E17C06200FC3119 /* Exercise 2 */ = {
@@ -362,14 +426,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503423041E197ED6001F7600 /* FavouritesViewController.swift in Sources */,
 				5005C3D61E16B5F700390102 /* FeaturedViewController.swift in Sources */,
+				503422FE1E196C9C001F7600 /* FontStylesDataSource.swift in Sources */,
 				50B433231E17C0AC00FC3119 /* PicturesCollectionViewController.swift in Sources */,
 				50B433331E17CDDF00FC3119 /* PicturesCollectionLayout.swift in Sources */,
 				5005C38A1E1540E100390102 /* AppDelegate.swift in Sources */,
 				5005C3DC1E16C76D00390102 /* FeaturedCollectionViewCell.swift in Sources */,
+				503422FC1E196B52001F7600 /* FontStylesViewController.swift in Sources */,
 				50B30BF11E16C90900F32DF8 /* FeaturedCollectionDataSource.swift in Sources */,
+				503422F91E196A32001F7600 /* FontFamiliesViewController.swift in Sources */,
+				503423011E197350001F7600 /* FontInfoViewController.swift in Sources */,
+				50BE47731E195DA8004B6178 /* ReuseCell.swift in Sources */,
+				503422F61E196A32001F7600 /* FontFamiliesDataSource.swift in Sources */,
 				50B4332C1E17C17600FC3119 /* PictureCollectionViewCell.swift in Sources */,
 				50B4332F1E17C2A900FC3119 /* PicturesCollectionDataSource.swift in Sources */,
+				503423061E197F75001F7600 /* FavouritesDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

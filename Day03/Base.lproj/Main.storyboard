@@ -6,6 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,6 +41,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="152" id="5tV-q6-rIj"/>
+                                    <constraint firstAttribute="width" secondItem="Cgo-aS-5t7" secondAttribute="height" multiplier="375:152" id="Qvq-Yw-hPZ"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Gxs-9l-K9B">
                                     <size key="itemSize" width="375" height="128"/>
@@ -46,6 +50,11 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5tV-q6-rIj"/>
+                                    </mask>
+                                </variation>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,7 +109,109 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Thx-nW-Uu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4341.6000000000004" y="2014.5427286356824"/>
+            <point key="canvasLocation" x="5281" y="2069"/>
+        </scene>
+        <!--Font Families-->
+        <scene sceneID="wK4-Ln-bZr">
+            <objects>
+                <viewController title="Font Families" id="P0w-0h-aGW" customClass="FontFamiliesViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N8N-Mu-5Q0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Families" id="Zrf-4R-dre"/>
+                    <connections>
+                        <outlet property="tableView" destination="N8N-Mu-5Q0" id="8a1-mt-Z5Q"/>
+                        <segue destination="YuH-Nx-bsK" kind="show" identifier="FontFamiliesToFontStyles" id="qw6-tg-16o"/>
+                        <segue destination="bu4-qL-jPi" kind="show" identifier="FamiliesToFavourites" id="7zN-Uk-Ep6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uM5-lU-8l7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5298.3999999999996" y="2968.9655172413795"/>
+        </scene>
+        <!--Favourites-->
+        <scene sceneID="IMR-pC-3PD">
+            <objects>
+                <viewController title="Favourites" id="bu4-qL-jPi" customClass="FavouritesViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKU-s5-d9a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="QKU-s5-d9a" id="Apy-cn-t3C"/>
+                        <segue destination="o93-FL-okZ" kind="show" identifier="FavouritesToInfo" id="U2k-Ba-fb7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ll-TZ-Bis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5668" y="3800"/>
+        </scene>
+        <!--Styles-->
+        <scene sceneID="oBw-iR-rgh">
+            <objects>
+                <viewController title="Styles" id="YuH-Nx-bsK" customClass="FontStylesViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="p7B-rR-m5W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="p7B-rR-m5W" id="AB0-1C-9zW"/>
+                        <segue destination="o93-FL-okZ" kind="show" identifier="StylesToInfo" id="5Re-Ee-nxu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSU-KP-UwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6334" y="2969"/>
+        </scene>
+        <!--Font Info-->
+        <scene sceneID="4mI-ii-DDz">
+            <objects>
+                <viewController title="Font Info" id="o93-FL-okZ" customClass="FontInfoViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9w2-Rb-2eh"/>
+                        <viewControllerLayoutGuide type="bottom" id="0s0-9R-or3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K0m-e3-QWl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="abcdefghijklmnopqrstuvwxyz" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auO-ar-Wii">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="546"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="17" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-21-X1z">
+                                <rect key="frame" x="14" y="563" width="347" height="31"/>
+                                <connections>
+                                    <action selector="slided:" destination="o93-FL-okZ" eventType="valueChanged" id="KxN-qR-RhB"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="auO-ar-Wii" firstAttribute="leading" secondItem="K0m-e3-QWl" secondAttribute="leading" id="448-4K-CbK"/>
+                            <constraint firstItem="w1d-21-X1z" firstAttribute="leading" secondItem="K0m-e3-QWl" secondAttribute="leadingMargin" id="BwP-8L-Bqp"/>
+                            <constraint firstItem="w1d-21-X1z" firstAttribute="top" secondItem="auO-ar-Wii" secondAttribute="bottomMargin" constant="25" id="IRo-99-dcE"/>
+                            <constraint firstItem="auO-ar-Wii" firstAttribute="top" secondItem="K0m-e3-QWl" secondAttribute="top" id="UYf-bJ-7eC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w1d-21-X1z" secondAttribute="trailing" id="ih3-4S-MUR"/>
+                            <constraint firstItem="0s0-9R-or3" firstAttribute="top" secondItem="w1d-21-X1z" secondAttribute="bottom" constant="25" id="nAP-8y-2ub"/>
+                            <constraint firstItem="w1d-21-X1z" firstAttribute="centerX" secondItem="K0m-e3-QWl" secondAttribute="centerX" id="pez-Hy-6ML"/>
+                            <constraint firstItem="auO-ar-Wii" firstAttribute="centerX" secondItem="w1d-21-X1z" secondAttribute="centerX" id="ycq-0b-jv6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="w1d-21-X1z" id="h43-XA-Nyl"/>
+                        <outlet property="textView" destination="auO-ar-Wii" id="khO-JJ-mMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cd7-GM-pdd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7465" y="3349"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vBY-Pw-EW1">
@@ -115,6 +226,7 @@
                     <connections>
                         <segue destination="kC8-fu-pq9" kind="relationship" relationship="viewControllers" id="Ayk-yL-lwe"/>
                         <segue destination="dro-WR-EVk" kind="relationship" relationship="viewControllers" id="ead-86-lAI"/>
+                        <segue destination="y7m-SZ-Bak" kind="relationship" relationship="viewControllers" id="dnH-oD-k1y"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qy-f8-hlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -140,8 +252,30 @@
             </objects>
             <point key="canvasLocation" x="4341.6000000000004" y="1247.2263868065968"/>
         </scene>
+        <!--Fonts Navigation Controller-->
+        <scene sceneID="Ma3-yc-9Ya">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y7m-SZ-Bak" userLabel="Fonts Navigation Controller" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fonts" id="IGw-N3-DlI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AXQ-tX-Pq8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P0w-0h-aGW" kind="relationship" relationship="rootViewController" id="rbj-3f-sqb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8uS-7i-OqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4359.1999999999998" y="2968.9655172413795"/>
+        </scene>
     </scenes>
     <resources>
         <image name="wish_list" width="22" height="13"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="U2k-Ba-fb7"/>
+    </inferredMetricsTieBreakers>
 </document>

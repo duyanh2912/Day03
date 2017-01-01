@@ -8,20 +8,18 @@
 
 import UIKit
 
-class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, ReuseCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var dataSource: FeaturedCollectionDataSource!
     
-    static let CELL_ID = "Cell"
     var timer: Timer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nib = UINib(nibName: "FeaturedCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: type(of: self).CELL_ID)
-        
+        collectionView.register(nib, forCellWithReuseIdentifier: CELL_ID)
     }
     
     override func viewWillAppear(_ animated: Bool) {

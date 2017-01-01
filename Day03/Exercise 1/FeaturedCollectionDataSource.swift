@@ -36,7 +36,7 @@ class FeaturedCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeaturedViewController.CELL_ID, for: indexPath) as! FeaturedCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: (collectionView.delegate as! ReuseCell).CELL_ID, for: indexPath) as! FeaturedCollectionViewCell
         cell.imageView.image = images[indexPath.row]
         return cell
     }

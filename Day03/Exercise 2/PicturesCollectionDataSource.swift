@@ -35,11 +35,15 @@ class PicturesCollectionDataSource: NSObject, UICollectionViewDataSource {
                 
                 self.thumbnails.append(UIImage.thumbnail(of: image, scaledToFillSize: CGSize(width: 300, height: 300)))
                 
-                DispatchQueue.main.sync {
+                DispatchQueue.main.async {
                     self.collectionView.insertItems(at: [IndexPath(item: index, section: 0)])
                 }
             }
         }
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func getThumbnail(index: Int) -> UIImage {
@@ -51,7 +55,7 @@ class PicturesCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PicturesCollectionViewController.CELL_ID, for: indexPath) as? PictureCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: (collectionView.delegate as! ReuseCell).CELL_ID, for: indexPath) as? PictureCollectionViewCell else { return UICollectionViewCell() }
         
         cell.layer.shouldRasterize = true
         cell.layer.rasterizationScale = UIScreen.main.scale
