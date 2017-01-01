@@ -15,8 +15,11 @@ class PicturesCollectionLayout: UICollectionViewLayout {
     var cache = [UICollectionViewLayoutAttributes]()
     
     override func prepare() {
-        guard cache.isEmpty else { return }
-        guard let numberOfItems = collectionView?.numberOfItems(inSection: 0) else { return }
+        guard let numberOfItems = collectionView?.dataSource?.collectionView(collectionView!, numberOfItemsInSection: 0) else { return }
+        
+        guard cache.count < numberOfItems else { return }
+        
+        let startIndex = cache.count
         
         contentWidth = collectionView!.width
         
@@ -26,7 +29,7 @@ class PicturesCollectionLayout: UICollectionViewLayout {
             contentHeight = contentWidth * CGFloat((numberOfItems - 1) / 6) + contentWidth
         }
         
-        for i in 0 ..< numberOfItems {
+        for i in startIndex ..< numberOfItems {
             let atr = UICollectionViewLayoutAttributes(forCellWith: IndexPath(item: i, section: 0))
             var size = CGSize(width: contentWidth / 3, height: contentWidth / 3)
             var origin = CGPoint(x: 0, y: CGFloat(i / 6) * contentWidth)

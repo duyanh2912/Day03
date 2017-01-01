@@ -35,6 +35,7 @@ class PicturesCollectionViewController: UIViewController, UICollectionViewDelega
             dataSource = PicturesCollectionDataSource(collectionView: collectionView)
             collectionView.dataSource = dataSource
             collectionView.collectionViewLayout = PicturesCollectionLayout()
+            dataSource?.loadImages()
         }
     }
 }

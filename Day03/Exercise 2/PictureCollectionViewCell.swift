@@ -15,5 +15,4 @@ class PictureCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }
