@@ -35,7 +35,7 @@ class PicturesCollectionDataSource: NSObject, UICollectionViewDataSource {
                 
                 self.thumbnails.append(UIImage.thumbnail(of: image, scaledToFillSize: CGSize(width: 300, height: 300)))
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.sync {
                     self.collectionView.insertItems(at: [IndexPath(item: index, section: 0)])
                 }
             }

@@ -141,7 +141,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
                     <connections>
-                        <outlet property="tableView" destination="QKU-s5-d9a" id="Apy-cn-t3C"/>
+                        <outlet property="tableView" destination="QKU-s5-d9a" id="Shk-Rf-NGM"/>
                         <segue destination="o93-FL-okZ" kind="show" identifier="FavouritesToInfo" id="U2k-Ba-fb7"/>
                     </connections>
                 </viewController>
@@ -159,7 +159,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
                     <connections>
-                        <outlet property="tableView" destination="p7B-rR-m5W" id="AB0-1C-9zW"/>
+                        <outlet property="tableView" destination="p7B-rR-m5W" id="iNw-bc-bt2"/>
                         <segue destination="o93-FL-okZ" kind="show" identifier="StylesToInfo" id="5Re-Ee-nxu"/>
                     </connections>
                 </viewController>

@@ -15,6 +15,15 @@ class FontFamiliesDataSource: NSObject, FontDataSource {
         super.init()
         self.tableView = tableView
         setNotification()
+        setKVO()
+    }
+    
+    func setKVO() {
+        dataModel.addObserver(self, forKeyPath: #keyPath(FontDataModel.favourites), options: .new, context: nil)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        tableView.reloadData()
     }
     
     func setNotification() {

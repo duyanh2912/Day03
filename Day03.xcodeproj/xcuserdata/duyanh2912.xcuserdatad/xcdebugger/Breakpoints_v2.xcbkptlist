@@ -41,30 +41,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Day03/Exercise 3/Font Families/FontFamiliesDataSource.swift"
-            timestampString = "505057783.063935"
+            filePath = "Day03/Exercise 3/FontDataModel.swift"
+            timestampString = "505061424.718268"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "FontFamiliesDataSource"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "FontDataModel"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Day03/Exercise 3/Font Families/FontFamiliesViewController.swift"
-            timestampString = "505058394.255924"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "configDataSource()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

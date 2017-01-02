@@ -26,11 +26,8 @@ class FontFamiliesViewController: FontViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "FontFamiliesToFontStyles" {
-            guard let vc = segue.destination as? FontStylesViewController else { return }
-            vc.family = tableView.cellForRow(at: tableView.indexPathForSelectedRow!)?.textLabel?.text!
-        } else if segue.identifier == "FamiliesToFavourites" {
-            guard let vc = segue.destination as? FavouritesViewController else { return }
-            vc.favourites = (dataSource as! FontFamiliesDataSource).dataModel.favourites
-        }
+            let family = tableView.cellForRow(at: tableView.indexPathForSelectedRow!)?.textLabel?.text!
+            dataSource?.dataModel.selectedFamily = family!
+        } 
     }
 }

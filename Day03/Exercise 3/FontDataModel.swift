@@ -14,10 +14,28 @@ class FontDataModel: NSObject {
     var allFonts: [String] {
         return UIFont.familyNames.sorted()
     }
-    dynamic var favourites: [String]
+    var selectedFamily: String = "Arial"
+    
+    dynamic var favourites: [String] = [] {
+        didSet {
+            saveFavourites()
+        }
+    }
     
     override init() {
-        self.favourites = []
         super.init()
+        loadFavourites()
+    }
+    
+    func loadFavourites() {
+        let standard = UserDefaults.standard
+        if let favourites = standard.array(forKey: "favourites") as? [String] {
+            self.favourites = favourites
+        }
+    }
+    
+    func saveFavourites() {
+        let standard = UserDefaults.standard
+        standard.set(favourites, forKey: "favourites")
     }
 }

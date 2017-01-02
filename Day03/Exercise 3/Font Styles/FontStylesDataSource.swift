@@ -8,15 +8,14 @@
 import UIKit
 import Foundation
 
-class FontStylesDataSource: NSObject, UITableViewDataSource {
+class FontStylesDataSource: NSObject, FontDataSource {
     weak var tableView: UITableView!
-    var family: String!
+    var family = FontDataModel.instance.selectedFamily
     var styles = [String]()
     
-    init(tableView: UITableView, fontFamily: String) {
+    init(tableView: UITableView) {
         self.tableView = tableView
-        self.family = fontFamily
-        self.styles = UIFont.fontNames(forFamilyName: fontFamily)
+        self.styles = UIFont.fontNames(forFamilyName: family)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

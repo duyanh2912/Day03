@@ -8,19 +8,12 @@
 
 import UIKit
 
-class FavouritesViewController: UIViewController, UITableViewDelegate, ReuseCell {
-    @IBOutlet var tableView: UITableView!
-    var dataSource: UITableViewDataSource?
-    var favourites: [String]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_ID)
-        
-        dataSource = FavouritesDataSource(tableView: tableView, fonts: favourites)
-        tableView.dataSource = dataSource
-        tableView.delegate = self
+class FavouritesViewController: FontViewController {
+    override func configDataSource() {
+        if dataSource == nil {
+            dataSource = FavouritesDataSource(tableView: tableView)
+            tableView.dataSource = dataSource
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

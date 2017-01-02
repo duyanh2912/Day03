@@ -63,11 +63,7 @@ class FeaturedViewController: UIViewController, UICollectionViewDelegateFlowLayo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.frame.size
     }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("done")
-    }
-    
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         setTimer()
         

@@ -19,7 +19,6 @@ class FeaturedCollectionDataSource: NSObject, UICollectionViewDataSource {
         path = path.appending("/Exercise1_Images/")
         
         let contents = try! FileManager.default.contentsOfDirectory(atPath: path)
-        print(contents)
         for name in contents {
             images.append(UIImage(named: path.appending(name))!)
         }

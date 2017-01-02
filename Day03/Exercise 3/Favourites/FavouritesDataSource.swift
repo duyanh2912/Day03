@@ -8,13 +8,14 @@
 import UIKit
 import Foundation
 
-class FavouritesDataSource: NSObject, UITableViewDataSource {
+class FavouritesDataSource: NSObject, FontDataSource {
     weak var tableView: UITableView!
-    var fonts: [String]
+    var fonts: [String] {
+        return dataModel.favourites
+    }
     
-    init(tableView: UITableView, fonts: [String]) {
+    init(tableView: UITableView) {
         self.tableView = tableView
-        self.fonts = fonts
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,5 +27,12 @@ class FavouritesDataSource: NSObject, UITableViewDataSource {
         cell.textLabel?.text = fonts[indexPath.row]
         cell.textLabel?.font = UIFont(name: fonts[indexPath.row], size: 17)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            dataModel.favourites.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }

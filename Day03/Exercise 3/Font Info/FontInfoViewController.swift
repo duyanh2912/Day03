@@ -25,7 +25,6 @@ class FontInfoViewController: UIViewController {
     }
     
     @IBAction func slided(_ sender: UISlider) {
-        print(sender.value)
         textView.font = textView.font?.withSize(CGFloat(sender.value))
     }
 }
