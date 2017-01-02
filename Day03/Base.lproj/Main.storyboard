@@ -116,7 +116,7 @@
             <objects>
                 <viewController title="Font Families" id="P0w-0h-aGW" customClass="FontFamiliesViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N8N-Mu-5Q0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
@@ -136,7 +136,7 @@
             <objects>
                 <viewController title="Favourites" id="bu4-qL-jPi" customClass="FavouritesViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QKU-s5-d9a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
@@ -154,7 +154,7 @@
             <objects>
                 <viewController title="Styles" id="YuH-Nx-bsK" customClass="FontStylesViewController" customModule="Day03" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="p7B-rR-m5W">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tableView>
@@ -176,17 +176,17 @@
                         <viewControllerLayoutGuide type="bottom" id="0s0-9R-or3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K0m-e3-QWl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="abcdefghijklmnopqrstuvwxyz" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auO-ar-Wii">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="546"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="482"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="17" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-21-X1z">
-                                <rect key="frame" x="14" y="563" width="347" height="31"/>
+                                <rect key="frame" x="14" y="499" width="347" height="31"/>
                                 <connections>
                                     <action selector="slided:" destination="o93-FL-okZ" eventType="valueChanged" id="KxN-qR-RhB"/>
                                 </connections>
@@ -258,7 +258,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y7m-SZ-Bak" userLabel="Fonts Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Fonts" id="IGw-N3-DlI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AXQ-tX-Pq8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="AXQ-tX-Pq8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

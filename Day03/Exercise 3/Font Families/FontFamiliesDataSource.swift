@@ -17,7 +17,7 @@ class FontFamiliesDataSource: NSObject, FontDataSource {
         setNotification()
         setKVO()
     }
-    
+        
     func setKVO() {
         dataModel.addObserver(self, forKeyPath: #keyPath(FontDataModel.favourites), options: .new, context: nil)
     }

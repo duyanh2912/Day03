@@ -41,6 +41,7 @@ class FontStylesViewController: FontViewController {
         let yes = UIAlertAction(title: "Yes", style: .default) { [unowned dataSource = self.dataSource!]
             _ in
             dataSource.dataModel.favourites.append(dataSource.dataModel.selectedFamily)
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
         }
         let no = UIAlertAction(title: "No", style: .default)
         ac.addAction(yes)

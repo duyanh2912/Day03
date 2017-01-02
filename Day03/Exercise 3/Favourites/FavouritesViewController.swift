@@ -16,6 +16,31 @@ class FavouritesViewController: FontViewController {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let removeAllButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(removeAll))
+        navigationItem.rightBarButtonItem = removeAllButton
+    }
+    
+    func removeAll(sender: UIBarButtonItem) {
+        let count = dataSource!.dataModel.favourites.count
+        dataSource?.dataModel.favourites.removeAll()
+        
+        var paths = [IndexPath]()
+        for i in 0 ..< count {
+            paths.append(IndexPath(row: i, section: 0))
+        }
+        tableView.deleteRows(at: paths, with: .automatic)
+        sender.isEnabled = false
+    }
+    
+    func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        if tableView.numberOfRows(inSection: 0) == 0 {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "FavouritesToInfo", sender: self)
     }

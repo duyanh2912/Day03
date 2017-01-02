@@ -267,8 +267,8 @@
 		503422F11E196A32001F7600 /* Font Families */ = {
 			isa = PBXGroup;
 			children = (
-				503422F21E196A32001F7600 /* FontFamiliesDataSource.swift */,
 				503422F51E196A32001F7600 /* FontFamiliesViewController.swift */,
+				503422F21E196A32001F7600 /* FontFamiliesDataSource.swift */,
 			);
 			path = "Font Families";
 			sourceTree = "<group>";

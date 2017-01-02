@@ -26,4 +26,12 @@ class FontViewController: UIViewController, UITableViewDelegate, ReuseCell {
     func configDataSource() {
         fatalError("Data Source not configed")
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
