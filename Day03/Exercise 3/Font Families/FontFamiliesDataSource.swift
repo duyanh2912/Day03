@@ -8,29 +8,13 @@
 import UIKit
 import Foundation
 
-class FontFamiliesDataSource: NSObject, UITableViewDataSource {
+class FontFamiliesDataSource: NSObject, FontDataSource {
     weak var tableView: UITableView!
-    var fontNames = [String]()
-    var fonts = [UIFont]()
-    var favourites: [String] = []
     
     init(tableView: UITableView) {
         super.init()
         self.tableView = tableView
         setNotification()
-    }
-    
-    func getFonts() {
-        tableView.reloadData()
-        DispatchQueue.global().async { [unowned self] in
-            for (index, font) in UIFont.familyNames.sorted().enumerated() {
-                self.fontNames.append(font)
-                self.fonts.append(UIFont(name: font, size: 17)!)
-                DispatchQueue.main.sync {
-                    self.tableView.insertRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
-                }
-            }
-        }
     }
     
     func setNotification() {
@@ -40,7 +24,7 @@ class FontFamiliesDataSource: NSObject, UITableViewDataSource {
     
     func favouritesReceived(notification: Notification) {
         let family = notification.userInfo?["family"] as! String
-        self.favourites.append(family)
+        dataModel.favourites.append(family)
         tableView.reloadData()
     }
     
@@ -52,12 +36,12 @@ class FontFamiliesDataSource: NSObject, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if favourites.isEmpty { return 1 }
+        if dataModel.favourites.isEmpty { return 1 }
         return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 { return fontNames.count }
+        if section == 0 { return dataModel.allFonts.count }
         return 1
     }
     
@@ -66,10 +50,10 @@ class FontFamiliesDataSource: NSObject, UITableViewDataSource {
         
         DispatchQueue.global().async { [unowned self] in
             if indexPath.section == 0 {
-                let font = self.fonts[indexPath.row]
+                let font = self.dataModel.allFonts[indexPath.row]
                 DispatchQueue.main.async {
-                    cell.textLabel?.text = self.fontNames[indexPath.row]
-                    cell.textLabel?.font = font
+                    cell.textLabel?.text = self.dataModel.allFonts[indexPath.row]
+                    cell.textLabel?.font = UIFont(name: font, size: 17)
                 }
                 
             } else {

@@ -8,24 +8,11 @@
 
 import UIKit
 
-class FontFamiliesViewController: UIViewController, UITableViewDelegate, ReuseCell {
-    @IBOutlet var tableView: UITableView!
-    var dataSource: UITableViewDataSource?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: CELL_ID)
-        tableView.delegate = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+class FontFamiliesViewController: FontViewController {
+    override func configDataSource() {
         if dataSource == nil {
-            self.dataSource = FontFamiliesDataSource(tableView: tableView)
+            dataSource = FontFamiliesDataSource(tableView: tableView)
             tableView.dataSource = dataSource
-            (dataSource as! FontFamiliesDataSource).getFonts()
         }
     }
     
@@ -43,7 +30,7 @@ class FontFamiliesViewController: UIViewController, UITableViewDelegate, ReuseCe
             vc.family = tableView.cellForRow(at: tableView.indexPathForSelectedRow!)?.textLabel?.text!
         } else if segue.identifier == "FamiliesToFavourites" {
             guard let vc = segue.destination as? FavouritesViewController else { return }
-            vc.favourites = (dataSource as! FontFamiliesDataSource).favourites
+            vc.favourites = (dataSource as! FontFamiliesDataSource).dataModel.favourites
         }
     }
 }

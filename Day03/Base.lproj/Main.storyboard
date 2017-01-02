@@ -122,7 +122,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Families" id="Zrf-4R-dre"/>
                     <connections>
-                        <outlet property="tableView" destination="N8N-Mu-5Q0" id="8a1-mt-Z5Q"/>
+                        <outlet property="tableView" destination="N8N-Mu-5Q0" id="g91-1p-K49"/>
                         <segue destination="YuH-Nx-bsK" kind="show" identifier="FontFamiliesToFontStyles" id="qw6-tg-16o"/>
                         <segue destination="bu4-qL-jPi" kind="show" identifier="FamiliesToFavourites" id="7zN-Uk-Ep6"/>
                     </connections>
