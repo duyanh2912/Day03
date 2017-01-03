@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FontInfoViewController: UIViewController {
+class FontInfoViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var slider: UISlider!
     var font: String!
@@ -16,7 +16,6 @@ class FontInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.font = UIFont(name: font, size: CGFloat(slider.value))
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {

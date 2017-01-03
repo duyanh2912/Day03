@@ -31,7 +31,7 @@ class FontViewController: UIViewController, UITableViewDelegate, ReuseCell {
         super.viewDidAppear(animated)
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPath, animated: true)
+            self.tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 }

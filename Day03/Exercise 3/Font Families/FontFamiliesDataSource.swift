@@ -14,7 +14,6 @@ class FontFamiliesDataSource: NSObject, FontDataSource {
     init(tableView: UITableView) {
         super.init()
         self.tableView = tableView
-        setNotification()
         setKVO()
     }
         
@@ -26,14 +25,9 @@ class FontFamiliesDataSource: NSObject, FontDataSource {
         tableView.reloadData()
     }
     
-    func setNotification() {
-        let nc = NotificationCenter.default
-        nc.addObserver(self, selector: #selector(favouritesReceived(notification:)), name: Notification.Name.init(rawValue: "favourites"), object: nil)
-    }
-    
     func favouritesReceived(notification: Notification) {
-        let family = notification.userInfo?["family"] as! String
-        dataModel.favourites.append(family)
+        let font = notification.userInfo?["font"] as! String
+        dataModel.favourites.append(font)
         tableView.reloadData()
     }
     

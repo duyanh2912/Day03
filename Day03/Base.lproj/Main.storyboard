@@ -180,13 +180,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="abcdefghijklmnopqrstuvwxyz" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auO-ar-Wii">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="482"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="17" minValue="17" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="w1d-21-X1z">
-                                <rect key="frame" x="14" y="499" width="347" height="31"/>
+                                <rect key="frame" x="24" y="504" width="327" height="31"/>
                                 <connections>
                                     <action selector="slided:" destination="o93-FL-okZ" eventType="valueChanged" id="KxN-qR-RhB"/>
                                 </connections>
@@ -195,11 +195,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="auO-ar-Wii" firstAttribute="leading" secondItem="K0m-e3-QWl" secondAttribute="leading" id="448-4K-CbK"/>
-                            <constraint firstItem="w1d-21-X1z" firstAttribute="leading" secondItem="K0m-e3-QWl" secondAttribute="leadingMargin" id="BwP-8L-Bqp"/>
+                            <constraint firstItem="w1d-21-X1z" firstAttribute="leading" secondItem="K0m-e3-QWl" secondAttribute="leadingMargin" constant="10" id="BwP-8L-Bqp"/>
                             <constraint firstItem="w1d-21-X1z" firstAttribute="top" secondItem="auO-ar-Wii" secondAttribute="bottomMargin" constant="25" id="IRo-99-dcE"/>
                             <constraint firstItem="auO-ar-Wii" firstAttribute="top" secondItem="K0m-e3-QWl" secondAttribute="top" id="UYf-bJ-7eC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w1d-21-X1z" secondAttribute="trailing" id="ih3-4S-MUR"/>
-                            <constraint firstItem="0s0-9R-or3" firstAttribute="top" secondItem="w1d-21-X1z" secondAttribute="bottom" constant="25" id="nAP-8y-2ub"/>
+                            <constraint firstItem="0s0-9R-or3" firstAttribute="top" secondItem="w1d-21-X1z" secondAttribute="bottom" constant="20" id="nAP-8y-2ub"/>
                             <constraint firstItem="w1d-21-X1z" firstAttribute="centerX" secondItem="K0m-e3-QWl" secondAttribute="centerX" id="pez-Hy-6ML"/>
                             <constraint firstItem="auO-ar-Wii" firstAttribute="centerX" secondItem="w1d-21-X1z" secondAttribute="centerX" id="ycq-0b-jv6"/>
                         </constraints>
@@ -258,7 +257,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y7m-SZ-Bak" userLabel="Fonts Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Fonts" id="IGw-N3-DlI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="AXQ-tX-Pq8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="AXQ-tX-Pq8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

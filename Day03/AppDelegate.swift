@@ -5,7 +5,7 @@
 //  Created by Duy Anh on 12/29/16.
 //  Copyright © 2016 Duy Anh. All rights reserved.
 //
-
+import Utils
 import UIKit
 
 @UIApplicationMain
@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Visualizer.start()
         return true
     }
 

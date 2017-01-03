@@ -35,6 +35,10 @@
 		502512581E1A8E1C00D6466D /* FontDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502512571E1A8E1C00D6466D /* FontDataModel.swift */; };
 		5025125A1E1A901500D6466D /* FontDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502512591E1A901500D6466D /* FontDataSource.swift */; };
 		5025125C1E1A909700D6466D /* FontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025125B1E1A909700D6466D /* FontViewController.swift */; };
+		502512641E1ABECB00D6466D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025125E1E1ABECB00D6466D /* Configuration.swift */; };
+		502512661E1ABECB00D6466D /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502512601E1ABECB00D6466D /* TouchView.swift */; };
+		502512671E1ABECB00D6466D /* UIWindow+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502512621E1ABECB00D6466D /* UIWindow+Swizzle.swift */; };
+		502512681E1ABECB00D6466D /* Visualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502512631E1ABECB00D6466D /* Visualizer.swift */; };
 		503422F61E196A32001F7600 /* FontFamiliesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503422F21E196A32001F7600 /* FontFamiliesDataSource.swift */; };
 		503422F91E196A32001F7600 /* FontFamiliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503422F51E196A32001F7600 /* FontFamiliesViewController.swift */; };
 		503422FC1E196B52001F7600 /* FontStylesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503422FB1E196B52001F7600 /* FontStylesViewController.swift */; };
@@ -109,6 +113,11 @@
 		502512571E1A8E1C00D6466D /* FontDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontDataModel.swift; sourceTree = "<group>"; };
 		502512591E1A901500D6466D /* FontDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontDataSource.swift; sourceTree = "<group>"; };
 		5025125B1E1A909700D6466D /* FontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontViewController.swift; sourceTree = "<group>"; };
+		5025125E1E1ABECB00D6466D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		502512601E1ABECB00D6466D /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchView.swift; sourceTree = "<group>"; };
+		502512611E1ABECB00D6466D /* TouchVisualizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchVisualizer.h; sourceTree = "<group>"; };
+		502512621E1ABECB00D6466D /* UIWindow+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Swizzle.swift"; sourceTree = "<group>"; };
+		502512631E1ABECB00D6466D /* Visualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Visualizer.swift; sourceTree = "<group>"; };
 		503422F21E196A32001F7600 /* FontFamiliesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamiliesDataSource.swift; sourceTree = "<group>"; };
 		503422F51E196A32001F7600 /* FontFamiliesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamiliesViewController.swift; sourceTree = "<group>"; };
 		503422FB1E196B52001F7600 /* FontStylesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontStylesViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +196,7 @@
 			children = (
 				5005C3A21E15414900390102 /* Utils.h */,
 				5005C3A31E15414900390102 /* Info.plist */,
+				5025125D1E1ABECB00D6466D /* TouchVisualizer */,
 				5005C3AD1E15416800390102 /* CoreGraphics */,
 				5005C3B31E15416800390102 /* GameplayKit */,
 				5005C3B51E15416800390102 /* SpriteKit */,
@@ -248,6 +258,19 @@
 				5005C3DB1E16C76D00390102 /* FeaturedCollectionViewCell.xib */,
 			);
 			path = "Exercise 1";
+			sourceTree = "<group>";
+		};
+		5025125D1E1ABECB00D6466D /* TouchVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				5025125E1E1ABECB00D6466D /* Configuration.swift */,
+				502512601E1ABECB00D6466D /* TouchView.swift */,
+				502512611E1ABECB00D6466D /* TouchVisualizer.h */,
+				502512621E1ABECB00D6466D /* UIWindow+Swizzle.swift */,
+				502512631E1ABECB00D6466D /* Visualizer.swift */,
+			);
+			name = TouchVisualizer;
+			path = ../TouchVisualizer;
 			sourceTree = "<group>";
 		};
 		503422F01E196A32001F7600 /* Exercise 3 */ = {
@@ -441,9 +464,11 @@
 				5025125A1E1A901500D6466D /* FontDataSource.swift in Sources */,
 				50B433231E17C0AC00FC3119 /* PicturesCollectionViewController.swift in Sources */,
 				50B433331E17CDDF00FC3119 /* PicturesCollectionLayout.swift in Sources */,
+				502512641E1ABECB00D6466D /* Configuration.swift in Sources */,
 				5005C38A1E1540E100390102 /* AppDelegate.swift in Sources */,
 				5005C3DC1E16C76D00390102 /* FeaturedCollectionViewCell.swift in Sources */,
 				503422FC1E196B52001F7600 /* FontStylesViewController.swift in Sources */,
+				502512661E1ABECB00D6466D /* TouchView.swift in Sources */,
 				50B30BF11E16C90900F32DF8 /* FeaturedCollectionDataSource.swift in Sources */,
 				503422F91E196A32001F7600 /* FontFamiliesViewController.swift in Sources */,
 				503423011E197350001F7600 /* FontInfoViewController.swift in Sources */,
@@ -451,9 +476,11 @@
 				502512581E1A8E1C00D6466D /* FontDataModel.swift in Sources */,
 				50BE47731E195DA8004B6178 /* ReuseCell.swift in Sources */,
 				503422F61E196A32001F7600 /* FontFamiliesDataSource.swift in Sources */,
+				502512671E1ABECB00D6466D /* UIWindow+Swizzle.swift in Sources */,
 				50B4332C1E17C17600FC3119 /* PictureCollectionViewCell.swift in Sources */,
 				50B4332F1E17C2A900FC3119 /* PicturesCollectionDataSource.swift in Sources */,
 				503423061E197F75001F7600 /* FavouritesDataSource.swift in Sources */,
+				502512681E1ABECB00D6466D /* Visualizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,19 +9,6 @@
 import UIKit
 
 class FontStylesViewController: FontViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addToFavourites))
-        navigationItem.rightBarButtonItem = addButton
-        
-        if dataSource!.dataModel.favourites.contains(dataSource!.dataModel.selectedFamily) {
-            DispatchQueue.main.async {
-                addButton.isEnabled = false
-            }
-        }
-    }
-    
     override func configDataSource() {
         if dataSource == nil {
             dataSource = FontStylesDataSource(tableView: tableView)
@@ -35,20 +22,6 @@ class FontStylesViewController: FontViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Styles", style: .plain, target: nil, action: nil)
     }
     
-    func addToFavourites() {
-        let ac = UIAlertController(title: "Add this font to favourites?", message: nil, preferredStyle: .alert)
-        
-        let yes = UIAlertAction(title: "Yes", style: .default) { [unowned dataSource = self.dataSource!]
-            _ in
-            dataSource.dataModel.favourites.append(dataSource.dataModel.selectedFamily)
-            self.navigationItem.rightBarButtonItem?.isEnabled = false
-        }
-        let no = UIAlertAction(title: "No", style: .default)
-        ac.addAction(yes)
-        ac.addAction(no)
-        present(ac, animated: true)
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "StylesToInfo", sender: self)
     }
@@ -58,5 +31,25 @@ class FontStylesViewController: FontViewController {
             guard let vc = segue.destination as? FontInfoViewController else { return }
             vc.font = tableView.cellForRow(at: tableView.indexPathForSelectedRow!)?.textLabel?.text!
         }
+    }
+    
+    func tappedAccessoryButton(sender: UIButton, event: UIEvent) {
+        let ac = UIAlertController(title: "Add this style to favourites?", message: nil, preferredStyle: .alert)
+        
+        let yes = UIAlertAction(title: "Yes", style: .default) { [unowned self]
+            _ in
+            guard let touch = event.allTouches?.first?.location(in: self.tableView) else { return }
+            guard let indexPath = self.tableView.indexPathForRow(at: touch) else { return }
+            guard let cell = self.tableView.cellForRow(at: indexPath) else { return }
+            
+            self.dataSource?.addFontToFavourites(cell.textLabel!.text!)
+            UIView.animate(withDuration: 0.5, animations: { sender.alpha = 0 }) { completed in
+                if completed == true { sender.isHidden = true }
+            }
+        }
+        let no = UIAlertAction(title: "No", style: .default)
+        ac.addAction(yes)
+        ac.addAction(no)
+        present(ac, animated: true)
     }
 }
